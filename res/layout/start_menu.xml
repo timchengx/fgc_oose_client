@@ -15,20 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
+        android:layout_centerVertical="true"
         android:onClick="newChess"
         android:text="@string/chinesechess" />
-
-    <Button
-        android:id="@+id/ButtonStartDarkChess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="130dp"
-        android:onClick="newChess"
-        android:text="@string/darkchess" />
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 /*******************************************************************************
- * Copyright (c) 2013 AUTHORS.txt
- * All rights reserved. Distributed under the terms of the MIT License.
+ * Copyright (c) 2013 AUTHORS.txt All rights reserved. Distributed under the terms of the MIT
+ * License.
  ******************************************************************************/
 package com.oose.chinesechess;
 
@@ -170,21 +170,6 @@ public class ChineseChessGame extends ChessGame {
     }
     cleanSelected();
     return result;
-  }
-
-  @Override
-  public boolean fallback() {
-    if (canFallback()) {
-      board.fallback();
-      status.fallback();
-      return true;
-    }
-    return false;
-  }
-
-  @Override
-  public boolean canFallback() {
-    return board.canFallback() && status.canFallback();
   }
 
 }

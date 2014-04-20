@@ -40,13 +40,6 @@
             android:theme="@style/FullscreenTheme" >
         </activity>
         <activity
-            android:name="com.oose.game.TimeSetup"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:label="@string/timesetup"
-            android:theme="@style/FullscreenTheme" >
-        </activity>
-        <activity
             android:name="com.oose.game.ChessSetup"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
@@ -58,13 +51,6 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:label="@string/chinesechessgame"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
-        </activity>
-        <activity
-            android:name="com.oose.game.DarkChessMain"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:label="@string/darkchessgame"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
         </activity>
     </application>

@@ -1,6 +1,6 @@
 /*******************************************************************************
- * Copyright (c) 2013 AUTHORS.txt
- * All rights reserved. Distributed under the terms of the MIT License.
+ * Copyright (c) 2013 AUTHORS.txt All rights reserved. Distributed under the terms of the MIT
+ * License.
  ******************************************************************************/
 package com.oose.game;
 
@@ -22,28 +22,19 @@ public class ChessMainMenu extends Activity {
   public static final int DARKCHESS = 1;
   public static int ERROR = -1;
 
-  private int currentChess; // user want to play
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     /* get data from previous activity */
-    Intent intent = getIntent();
+    //Intent intent = getIntent();
 
     super.onCreate(savedInstanceState);
 
     /* setup this activity view's layout */
     setContentView(R.layout.chess_main_menu);
-    getActionBar().setDisplayHomeAsUpEnabled(true);
+    //getActionBar().setDisplayHomeAsUpEnabled(true);
 
-    /* determine user want to play */
-    currentChess = intent.getIntExtra(ChessMainMenu.CHESSTYPE_INT, ERROR);
-
-    /* from user's choice, set window title */
-    if (currentChess == ChessMainMenu.CHINESECHESS)
-      getActionBar().setTitle(R.string.chinesechess);
-    else
-      // user choose dark chess
-      getActionBar().setTitle(R.string.darkchess);
+    getActionBar().setTitle(R.string.chinesechess);
   }
 
   /* if user push back button, go back to StartMenu */
@@ -58,15 +49,7 @@ public class ChessMainMenu extends Activity {
     /* push new game */
     if (view.getId() == R.id.ButtonNewGame) {
       intent.setClass(this, ChessSetup.class);
-      intent.putExtra(ChessMainMenu.CHESSTYPE_INT, currentChess);
-    } else {
-      if (currentChess == CHINESECHESS)
-        intent.setClass(this, ChineseChessMain.class);
-      else
-        // user choise to play Dark Chess
-        intent.setClass(this, DarkChessMain.class);
-      /* ask game to load save data */
-      intent.putExtra(LOADSAVEFILE, true);
+      intent.putExtra(ChessMainMenu.CHESSTYPE_INT, ChessMainMenu.CHINESECHESS);
     }
     startActivity(intent);
     onStop();

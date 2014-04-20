@@ -9,7 +9,7 @@ import java.io.Serializable;
 import android.graphics.Bitmap;
 
 /* MVC's Model */
-abstract public class GameState implements Serializable, Fallback {
+abstract public class GameState implements Serializable {
   private static final long serialVersionUID = -8642239316987428479L;
   public static final int PLAYERONE = 1;
   public static final int PLAYERTWO = 2;
@@ -87,23 +87,5 @@ abstract public class GameState implements Serializable, Fallback {
     else
       currentPlayer = GameState.PLAYERONE;
   }
-
-  @Override
-  public boolean canFallback() {
-    if (currentPlayer == PLAYERONE) {
-      if (playerOneFallbackCount > 0)
-        return true;
-    } else if (playerTwoFallbackCount > 0)
-      return true;
-    return false;
-  }
-
-  @Override
-  public boolean fallback() {
-    if (currentPlayer == PLAYERONE)
-      playerOneFallbackCount--;
-    else
-      playerTwoFallbackCount--;
-    return true;
-  }
+  
 }

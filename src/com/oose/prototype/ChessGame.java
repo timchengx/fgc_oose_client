@@ -5,10 +5,11 @@
 package com.oose.prototype;
 
 import java.io.Serializable;
+
 import android.graphics.Canvas;
 
 /* Main ChessGame Logic(Controller) */
-public abstract class ChessGame implements Serializable, Fallback {
+public abstract class ChessGame implements Serializable {
 
   private static final long serialVersionUID = 3804242090043209356L;
 
@@ -33,13 +34,6 @@ public abstract class ChessGame implements Serializable, Fallback {
   abstract protected boolean eat(int x, int y);
 
   abstract protected int isEnd();
-
-  /* fallback to previous state */
-  @Override
-  abstract public boolean fallback();
-
-  @Override
-  abstract public boolean canFallback();
 
   /* if someone call give up... */
   public int giveUp() {

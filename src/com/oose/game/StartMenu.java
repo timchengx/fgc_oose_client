@@ -1,6 +1,6 @@
 /*******************************************************************************
- * Copyright (c) 2013 AUTHORS.txt
- * All rights reserved. Distributed under the terms of the MIT License.
+ * Copyright (c) 2013 AUTHORS.txt All rights reserved. Distributed under the terms of the MIT
+ * License.
  ******************************************************************************/
 package com.oose.game;
 
@@ -9,9 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-/*
- * First Activity(Window) let user Choose which game that he(she) want to play
- */
 public class StartMenu extends Activity {
 
   @Override
@@ -23,12 +20,9 @@ public class StartMenu extends Activity {
   public void newChess(View view) {
     Intent intent = new Intent(this, ChessMainMenu.class);
 
-    /* user choose to play Chinese Chess */
-    if (view.getId() == R.id.ButtonStartChineseChess)
-      intent.putExtra(ChessMainMenu.CHESSTYPE_INT, ChessMainMenu.CHINESECHESS);
-    /* he(she) want to play Dark Chess */
-    else
-      intent.putExtra(ChessMainMenu.CHESSTYPE_INT, ChessMainMenu.DARKCHESS);
+    /* INCOMPLETE, NEED INTEGRATE FGC LOGIN PROCESS */
+    /* now only chinese chess */
+    intent.putExtra(ChessMainMenu.CHESSTYPE_INT, ChessMainMenu.CHINESECHESS);
 
     startActivity(intent); // goto Chess Main Menu
     onStop();

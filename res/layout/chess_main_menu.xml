@@ -1,14 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
+    android:background="@color/black_overlay"
     android:focusableInTouchMode="true"
+    android:label="@string/chinesechess"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:label="@string/chinesechess" >
+    android:paddingTop="@dimen/activity_vertical_margin" >
 
     <Button
         android:id="@+id/ButtonNewGame"
@@ -16,20 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="150dp"
+        android:layout_centerVertical="true"
         android:onClick="selectGame"
         android:text="@string/newgame" />
-
-    <Button
-        android:id="@+id/ButtonLoadGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/ButtonNewGame"
-        android:layout_marginTop="76dp"
-        android:onClick="selectGame"
-        android:text="@string/loadgame" />
 
 </RelativeLayout>

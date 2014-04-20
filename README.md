@@ -1,8 +1,8 @@
 oosegame
 ========
-Currently, This Game will run at 800x480 resolution ONLY.
+Under construction...
 
-Some design concept are written in __report.pdf__
+forked from oosegame
 
 License
 ========

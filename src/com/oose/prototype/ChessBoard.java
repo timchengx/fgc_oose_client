@@ -10,7 +10,7 @@ import java.util.Iterator;
 import android.graphics.Bitmap;
 
 /* MVC's Model */
-public abstract class ChessBoard implements Iterable<ChessMan>, Observer, Fallback, Serializable {
+public abstract class ChessBoard implements Iterable<ChessMan>, Observer, Serializable {
 
   private static final long serialVersionUID = 8448462241599153803L;
 
@@ -56,23 +56,6 @@ public abstract class ChessBoard implements Iterable<ChessMan>, Observer, Fallba
       ppBoard = pBoard;
     pBoard = snapshot;
     snapshot = null;
-  }
-
-  /* Fallback to previous board state */
-  @Override
-  public boolean fallback() {
-    nowBoard = ppBoard;
-    pBoard = null;
-    ppBoard = null;
-    return true;
-  }
-
-  /* Determine can fallback or not */
-  @Override
-  public boolean canFallback() {
-    if (ppBoard != null)
-      return true;
-    return false;
   }
 
   /* Grab chess from board */
